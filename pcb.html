@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PCB Designer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">Electronics AI</div>
+
+<a href="index.html">Dashboard</a>
+<a href="chat.html">AI Chat</a>
+<a href="simulation.html">Simulation</a>
+<a href="pcb.html">PCB Designer</a>
+<a href="code.html">MCU Code</a>
+
+</div>
+
+<div class="main">
+
+<div class="header">PCB Layout Planner</div>
+
+<div class="card">
+
+<input placeholder="Enter components (ESP32, regulator, LEDs)">
+
+<button onclick="layout()">Generate Placement</button>
+
+<div class="output" id="pcboutput">
+Placement preview appears here
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function layout(){
+
+document.getElementById("pcboutput").innerHTML="Generating placement...";
+
+setTimeout(function(){
+
+document.getElementById("pcboutput").innerHTML=
+"Auto-placement complete (demo preview)";
+
+},1500);
+
+}
+
+</script>
+
+</body>
+</html>
