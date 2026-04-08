@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MCU Code Generator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">Electronics AI</div>
+
+<a href="index.html">Dashboard</a>
+<a href="chat.html">AI Chat</a>
+<a href="simulation.html">Simulation</a>
+<a href="pcb.html">PCB Designer</a>
+<a href="code.html">MCU Code</a>
+
+</div>
+
+<div class="main">
+
+<div class="header">Microcontroller Code Generator</div>
+
+<div class="card">
+
+<textarea id="codereq"
+placeholder="Example: Blink LED ESP32"></textarea>
+
+<button onclick="generate()">Generate Code</button>
+
+<div class="output" id="codeoutput">
+Generated code appears here
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function generate(){
+
+document.getElementById("codeoutput").innerHTML="Generating code...";
+
+setTimeout(function(){
+
+document.getElementById("codeoutput").innerHTML=
+"void setup(){pinMode(2,OUTPUT);} void loop(){digitalWrite(2,HIGH);}";
+
+},1500);
+
+}
+
+</script>
+
+</body>
+</html>
