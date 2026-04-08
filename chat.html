@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Chat</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">Electronics AI</div>
+
+<a href="index.html">Dashboard</a>
+<a href="chat.html">AI Chat</a>
+<a href="simulation.html">Simulation</a>
+<a href="pcb.html">PCB Designer</a>
+<a href="code.html">MCU Code</a>
+
+</div>
+
+<div class="main">
+
+<div class="header">Electronics AI Chat</div>
+
+<div class="card">
+
+<textarea id="question"
+placeholder="Example: Design LED driver using transistor"></textarea>
+
+<button onclick="reply()">Ask AI</button>
+
+<div class="output" id="answer">
+AI response will appear here
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function reply(){
+
+document.getElementById("answer").innerHTML="Processing request...";
+
+setTimeout(function(){
+
+document.getElementById("answer").innerHTML=
+"Suggested: Use NPN transistor + base resistor + diode protection (demo)";
+
+},1500);
+
+}
+
+</script>
+
+</body>
+</html>
