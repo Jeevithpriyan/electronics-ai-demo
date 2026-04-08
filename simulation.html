@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simulation Workspace</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">Electronics AI</div>
+
+<a href="index.html">Dashboard</a>
+<a href="chat.html">AI Chat</a>
+<a href="simulation.html">Simulation</a>
+<a href="pcb.html">PCB Designer</a>
+<a href="code.html">MCU Code</a>
+
+</div>
+
+<div class="main">
+
+<div class="header">Circuit Simulation</div>
+
+<div class="card">
+
+<input placeholder="Voltage (example: 12V)">
+
+<input placeholder="Resistance (example: 1kΩ)">
+
+<input placeholder="Capacitance (example: 100uF)">
+
+<button onclick="simulate()">Run Simulation</button>
+
+<div class="output" id="result">
+Simulation output appears here
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function simulate(){
+
+document.getElementById("result").innerHTML="Running simulation...";
+
+setTimeout(function(){
+
+document.getElementById("result").innerHTML=
+"Simulation successful: waveform stable (demo mode)";
+
+},1500);
+
+}
+
+</script>
+
+</body>
+</html>
